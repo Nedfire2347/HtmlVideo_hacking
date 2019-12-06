@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="videodiv">
+      <video class="videobg" src="HackingSystem.mp4" autoplay muted loop><video>
+      <video class="videobase" src="HackingSystem.mp4" autoplay muted loop></video>
+    </div>
+  </body>
+</html>
+
+<script>
+    var vid = document.getElementsByTagName("video");
+    for (v of vid) v.playbackRate = 2;
+</script>
+
+<style media="screen">
+  .videodiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  video {
+    height:100%;
+  }
+
+  .videobase {
+    opacity: 0.85;
+  }
+
+  .videobg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    filter: blur(30px);
+    z-index: -50;
+    margin: -30px;
+    transform: scale(1.25);
+
+  }
+</style>
